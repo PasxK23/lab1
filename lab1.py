@@ -11,6 +11,8 @@ def more(text):
                 break
 
 url = input("Give url:\t")  # προσδιορισμός του url
+if not url.startswitch("https://"):
+    url = 'https://' + url
 print(url)
 
 with requests.get(url) as response:  # το αντικείμενο response
