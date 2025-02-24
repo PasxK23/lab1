@@ -23,7 +23,6 @@ with requests.get(url) as response:  # το αντικείμενο response
         print("\nΗ σελίδα χρησιμοποιεί cookies:")
         for cookie in cookies:
             print(f"- Όνομα: {cookie.name}")
-            print(f"  Τιμή: {cookie.value}")
             print(f"  Λήξη: {cookie.expires if cookie.expires else 'Δεν καθορίζεται'}")
     else:
         print("\nΗ σελίδα δεν χρησιμοποιεί cookies.")
