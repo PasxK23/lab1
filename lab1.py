@@ -18,4 +18,13 @@ print(url)
 with requests.get(url) as response:  # το αντικείμενο response
     #for key in response.headers:
     print(f"Server:{response.headers.get('Server')}")
+    cookies = response.cookies
+    if cookies:
+        print("\nΗ σελίδα χρησιμοποιεί cookies:")
+        for cookie in cookies:
+            print(f"- Όνομα: {cookie.name}")
+            print(f"  Τιμή: {cookie.value}")
+            print(f"  Λήξη: {cookie.expires if cookie.expires else 'Δεν καθορίζεται'}")
+    else:
+        print("\nΗ σελίδα δεν χρησιμοποιεί cookies.")
     # more(html)
