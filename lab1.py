@@ -10,8 +10,9 @@ def more(text):
             if reply == 'n':
                 break
 
-url = 'http://python.org/'  # προσδιορισμός του url
+url = input("Give url:\t")  # προσδιορισμός του url
+print(url)
 
-with requests.get(url) as response:  # το αντικείμενο response
-    html = response.text
-    more(html)
+# with requests.get(url) as response:  # το αντικείμενο response
+#     html = response.text
+#     more(html)
