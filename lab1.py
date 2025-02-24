@@ -17,5 +17,5 @@ print(url)
 
 with requests.get(url) as response:  # το αντικείμενο response
     #for key in response.headers:
-    print(f"Server:{response.headers.get("Server")}")
+    print(f"Server:{response.headers.get('Server')}")
     # more(html)
