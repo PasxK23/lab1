@@ -15,7 +15,7 @@ if not url.startswith("https://"):
     url = 'https://' + url
 print(url)
 
-with requests.get(url) as response:  # το αντικείμενο response
-    html = response.text
-    print(html)
+# with requests.get(url) as response:  # το αντικείμενο response
+#     html = response.text
+#     print(html)
     # more(html)
